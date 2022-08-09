@@ -37,8 +37,9 @@ jobs:
           npm run build --if-present
           npm test
   Deploy:
-    - name: deploy
-      uses: JamesIves/github-pages-deploy-action@v4.2.3
+    - name: Deploy
+      uses: JamesIves/github-pages-deploy-action@v4.3.0
       with:
+        token: "${{ secrets.GITHUB_TOKEN }}"
         branch: gh-pages
         folder: build
