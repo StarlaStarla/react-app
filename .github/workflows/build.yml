@@ -36,26 +36,9 @@ jobs:
           npm ci
           npm run build --if-present
           npm test
-      - name: Upload files 
-        uses: actions/upload-artifact@v3
-        with: 
-          name: build-pages
-          path: build
-          retention-days: 1
-  deploy:
-    needs: build 
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-      - name: download build files
-        uses: actions/download-artifact@v3
-        with:
-          name: build-pages
-          path: build
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.3.0
         with:
-          token: "${{ secrets.GITHUB_TOKEN }}"
+          token: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages
           folder: build
