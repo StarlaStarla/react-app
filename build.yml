@@ -12,19 +12,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-<<<<<<< Updated upstream
           fetch-depth: 0 # Shallow clones should be disabled for a better relevancy of analysis
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information, if any
-=======
-          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
-      - name: SonarCloud Scan
-        uses: SonarSource/sonarcloud-github-action@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
->>>>>>> Stashed changes
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
   build:
     runs-on: ubuntu-latest
@@ -44,24 +36,14 @@ jobs:
           npm ci
           npm run build --if-present
           npm test
-<<<<<<< Updated upstream
       - name: Upload files
         uses: actions/upload-artifact@v3
         with:
-=======
-      - name: Upload files 
-        uses: actions/upload-artifact@v3
-        with: 
->>>>>>> Stashed changes
           name: build-pages
           path: build
           retention-days: 1
   deploy:
-<<<<<<< Updated upstream
     needs: build
-=======
-    needs: build 
->>>>>>> Stashed changes
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -74,10 +56,6 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.3.0
         with:
-<<<<<<< Updated upstream
           token: '${{ secrets.GITHUB_TOKEN }}'
-=======
-          token: "${{ secrets.GITHUB_TOKEN }}"
->>>>>>> Stashed changes
           branch: gh-pages
           folder: build
