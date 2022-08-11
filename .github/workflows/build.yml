@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-versions: [14.x]
+        node-version: '14.x'
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -34,9 +34,7 @@ jobs:
       - name: Install Dependence & Test & Build
         run: |
           npm ci
-          npm run build --if-present
-          npm test
-          npm build
+          npm run build
       - name: Upload files 
         uses: actions/upload-artifact@v2
         with: 
