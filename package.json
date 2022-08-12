@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@babel/plugin-proposal-decorators": "^7.18.10",
+    "@commitlint/config-conventional": "^17.0.3",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/user-event": "^14.4.3",
     "react": "^18.2.0",
