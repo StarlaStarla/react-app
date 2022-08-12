@@ -75,7 +75,7 @@
     ],
     "**/*.{tsx,ts}": [
       "eslint --fix",
-      "yarn test ---passWithNoTests"
+      "yarn test"
     ],
     "**/*.{css,scss,less}": "stylelint '**/*.{css,less,scss}' --fix"
   },
