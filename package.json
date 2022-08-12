@@ -43,7 +43,7 @@
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-react": "^7.30.1",
     "gh-pages": "^4.0.0",
-    "husky": "^8.0.0",
+    "husky": "^8.0.1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^28.1.3",
     "jest-environment-jsdom": "^28.1.3",
@@ -73,9 +73,12 @@
       "prettier --write"
     ],
     "**/*.{tsx,ts}": [
-      "eslint --fix .ts,.tsx",
+      "eslint --fix",
       "yarn test"
     ],
     "**/*.{css,scss,less}": "stylelint '**/*.{css,less,scss}' --fix"
+  },
+  "solutions": {
+    "got": "^12.1.0"
   }
 }
