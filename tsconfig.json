@@ -25,5 +25,16 @@
   "types": [
     "vite/client",
     "jest"
-  ]
+  ],
+  "paths": {
+    "@/*": [
+      "src/*"
+    ],
+    "@page/*": [
+      "src/page/*"
+    ],
+    "@img/*": [
+      "src/asstes/img/*"
+    ]
+  }
 }

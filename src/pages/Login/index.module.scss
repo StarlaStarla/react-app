@@ -1,0 +1,24 @@
+:local {
+  .wrapper {
+    padding: 56px 16px;
+
+    .other-operation {
+      margin-top: 33px;
+      color: $color-primary;
+      font-size: $font-size-mid;
+      font-weight: 600;
+      text-align: center;
+
+      .sign-up {
+        margin-top: 38px;
+        color: $color-gray;
+        font-size: $font-size-normal;
+        font-weight: 500;
+
+        span {
+          color: $color-primary;
+        }
+      }
+    }
+  }
+}
