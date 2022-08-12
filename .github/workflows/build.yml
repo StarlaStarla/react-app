@@ -38,8 +38,8 @@ jobs:
       - name: Upload files
         uses: actions/upload-artifact@v2
         with:
-          name: build-pages
-          path: build
+          name: dist-pages
+          path: dist
           retention-days: 1
   deploy:
     needs: build
