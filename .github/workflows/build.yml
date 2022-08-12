@@ -33,6 +33,7 @@ jobs:
           cache: 'npm'
       - name: Install Dependence & Test & Build
         run: |
+          yarn 
           yarn test
           yarn build
       - name: Upload files
