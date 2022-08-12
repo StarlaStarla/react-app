@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-# npx --no -- commitlint --edit $1
+npx --no-install commitlint --edit $1
 
 # Type(<scope>): <subject>
 
@@ -22,3 +22,4 @@
 # Body 部分是对本次 commit 的详细描述，可以分成多行
 # Footer用来关闭 Issue或以BREAKING CHANGE开头，后面是对变动的描述、
 #  以及变动理由和迁移方法
+
