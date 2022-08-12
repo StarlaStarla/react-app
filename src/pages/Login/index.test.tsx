@@ -1,8 +1,7 @@
-import { render, screen, waitFor, within } from '@testing-library/react'
+import { render, screen, within } from '@testing-library/react'
 import Login from './index'
 import { createMemoryHistory, MemoryHistory } from 'history'
 import { Router } from 'react-router-dom'
-import userEvent from '@testing-library/user-event'
 
 describe('test Login page', () => {
   let history: MemoryHistory

@@ -14,27 +14,18 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["./src/*"] //* can not be omitted, otherwise the @ cannot be found or there would be no code prompt
+    }
   },
-  "include": ["src"],
+  "include": ["./src"],
+  "exclude": ["node_modules"],
   "references": [
     {
       "path": "./tsconfig.node.json"
     }
   ],
-  "types": [
-    "vite/client",
-    "jest"
-  ],
-  "paths": {
-    "@/*": [
-      "src/*"
-    ],
-    "@page/*": [
-      "src/page/*"
-    ],
-    "@img/*": [
-      "src/asstes/img/*"
-    ]
-  }
+  "types": ["vite/client", "jest"]
 }

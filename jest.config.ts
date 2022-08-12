@@ -86,11 +86,11 @@ export default {
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
 
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
-  // moduleNameMapper: {
-  //   '^.+\\.module\\.(css|sass|scss)$': 'identity-obj-proxy',
-  //   '^.+\\.module\\.svg$': 'identity-obj-proxy',
-  //   'antd/es/(.*)': 'antd/lib/$1',
-  // },
+  moduleNameMapper: {
+    '^.+\\.module\\.(css|sass|scss)$': 'identity-obj-proxy',
+    '^.+\\.module\\.svg$': 'identity-obj-proxy',
+    'antd/es/(.*)': 'antd/lib/$1',
+  },
 
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
   // modulePathIgnorePatterns: [],
@@ -173,20 +173,16 @@ export default {
 
   // A map from regular expressions to paths to transformers
   transform: {
-    // '^.+\\.(js|jsx|mjs|cjs)$': 'babel-jest',
-    // '^.+\\.(ts|tsx)$': 'ts-jest',
-    // '^.+\\.(css|scss)$': '<rootDir>/test/cssTransform.js',
-    // '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
-    //   '<rootDir>/test/fileTransform.js',
-    '^.+\\.(css|scss|sass)$': 'jest-preview/transforms/css',
-    '^(?!.*\\.(js|jsx|mjs|cjs|ts|tsx|css|json)$)': 'jest-preview/transforms/file',
+    '^.+\\.(js|jsx|mjs|cjs)$': 'babel-jest',
+    '^.+\\.(ts|tsx)$': 'ts-jest',
+    '^.+\\.(css|scss)$': '<rootDir>/test/cssTransform.cjs',
+    '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$': '<rootDir>/test/fileTransform.cjs',
+    // '^.+\\.(css|scss|sass)$': 'jest-preview/transforms/css',
+    // '^(?!.*\\.(js|jsx|mjs|cjs|ts|tsx|css|json)$)': 'jest-preview/transforms/file',
   },
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
-  // transformIgnorePatterns: [
-  //   '[/\\\\]node_modules[/\\\\].+\\.(jsx|mjs|cjs|ts|tsx)$',
-  //   '^.+\\.module\\.(css|sass|scss)$',
-  // ],
+  transformIgnorePatterns: ['[/\\\\]node_modules[/\\\\].+\\.(jsx|mjs|cjs|ts|tsx)$', '^.+\\.module\\.(css|sass|scss)$'],
 
   // An array of regexp pattern strings that are matched against all modules before the module loader will automatically return a mock for them
   // unmockedModulePathPatterns: undefined,
