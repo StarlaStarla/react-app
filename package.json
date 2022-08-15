@@ -82,8 +82,7 @@
       "prettier --write"
     ],
     "**/*.{tsx,ts}": [
-      "eslint --fix --ext .ts,.tsx",
-      "yarn test"
+      "eslint --fix --ext .ts,.tsx"
     ],
     "**/*.module.{css,scss,less}": "stylelint '**/*.module.{css,less,scss}' --fix"
   },
