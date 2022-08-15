@@ -18,5 +18,6 @@ module.exports = {
     // 禁止 var 声明 与外层作用域的变量同名
     'no-shadow': 0,
     'no-undef': 0,
+    '@typescript-eslint/no-var-requires': 0,
   },
 }
