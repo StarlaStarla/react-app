@@ -4,7 +4,7 @@ import viteEslint from 'vite-plugin-eslint'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/react-app/',
+  base: '/react-app',
   resolve: {
     alias: {
       '@': '/src/',
