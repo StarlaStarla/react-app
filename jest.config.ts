@@ -156,9 +156,9 @@ export default {
 
   // The glob patterns Jest uses to detect test files
   testMatch: [
-    '<rootDir>\\src\\**\\*.{spec,test}.{js,jsx,ts,tsx}',
-    '<rootDir>\\src\\**\\__tests__\\**\\*.{spec,test}.{js,jsx,ts,tsx}',
-    '<rootDir>\\__test__\\**\\*.{spec,test}.{js,jsx,ts,tsx}',
+    '<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}',
+    '<rootDir>/src/**/__tests__/**/*.{spec,test}.{js,jsx,ts,tsx}',
+    '<rootDir>/__test__/**/*.{spec,test}.{js,jsx,ts,tsx}',
   ],
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
